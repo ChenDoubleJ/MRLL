@@ -10,7 +10,5 @@ The full MRLLD dataset is available at **[Baidu Drive](https://pan.baidu.com/s/1
 ## Synchronized dual-spectral imaging and registration
 <img width="2523" height="1048" alt="image" src="https://github.com/user-attachments/assets/6c63d9b6-7832-420e-ac79-0098ab960ccf" />
 
-## Comparisons of pixel variation
-<img width="1205" height="316" alt="image" src="https://github.com/user-attachments/assets/6f33d8f9-de15-4fda-8480-59a7d5703f53" />
-
+## Comparisons of low-light fusion datasets.
 <img width="1917" height="519" alt="PixPin_2026-05-19_18-38-36" src="https://github.com/user-attachments/assets/f5a8c870-52ee-406b-94cf-a77cc484af48" />
