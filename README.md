@@ -81,7 +81,7 @@ The MRLL dataset is collected using synchronized infrared and visible imaging de
 
 ## 🌃 Scenario Schematic
 
-MRLL covers diverse real-world low-light scenarios, including challenging nighttime environments with complex illumination, weak textures, and degraded visible information.
+MRLL covers diverse real-world low-light scenarios (Indoor and Outdoor), including challenging nighttime environments with complex illumination, weak textures, and degraded visible information.
 
 <p align="center">
   <img width="2058" height="805" alt="Scenario schematic" src="https://github.com/user-attachments/assets/06983185-f1d2-4923-8e5b-8fc1fe67c4bb" />
