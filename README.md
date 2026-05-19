@@ -8,8 +8,6 @@ The full MRLLD dataset is available at **[Baidu Drive](https://pan.baidu.com/s/1
 <img width="2523" height="1048" alt="image" src="https://github.com/user-attachments/assets/6c63d9b6-7832-420e-ac79-0098ab960ccf" />
 
 ## Scenario Schematic
-<img width="1210" height="335" alt="image" src="https://github.com/user-attachments/assets/4d27c785-eb16-4604-b1f7-5ad658563a8a" />
-
 <img width="2058" height="805" alt="image" src="https://github.com/user-attachments/assets/06983185-f1d2-4923-8e5b-8fc1fe67c4bb" />
 
 ## Comparisons of low-light fusion datasets.
