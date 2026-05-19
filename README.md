@@ -1,4 +1,4 @@
-<img width="2058" height="805" alt="image" src="https://github.com/user-attachments/assets/301e1554-d34e-46e5-9362-ae9660dd4c09" /># MRLL
+# MRLL
 MRLL：Multi-modal real-world low-light dataset.
 
 ## Dataset Availability
