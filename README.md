@@ -131,14 +131,6 @@ The license will be announced before the public code release. Please use the MRL
 
 If you find this work or dataset useful for your research, please consider citing our paper. The BibTeX entry will be updated after publication.
 
-```bibtex
-@article{chen2026blfusion,
-  title   = {Breaking Low-Light Fusion Barrier: Unsupervised Darkness and Noise-Aware Visible and Infrared Image Fusion Network},
-  author  = {Jiajun Chen and Han Xu and Guangcan Liu and Jiayi Ma},
-  journal = {IEEE Transactions on Image Processing},
-  year    = {2026}
-}
-```
 
 ## 📬 Contact
 
