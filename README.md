@@ -1,69 +1,90 @@
-# BLFusion
+<div align="center">
 
-Official repository for **BLFusion**.
+# BLFusion-MRLL
 
-> Code will be released upon paper acceptance.
+### Breaking Low-Light Fusion Barrier: Unsupervised Darkness and Noise-Aware Visible and Infrared Image Fusion Network
+
+[![Paper](https://img.shields.io/badge/Paper-IEEE%20TIP(revision)-blue)](#citation)
+[![Code](https://img.shields.io/badge/Code-coming%20soon-orange)](#release-plan)
+[![Dataset](https://img.shields.io/badge/MRLL-available-brightgreen)](#dataset-availability)
+[![License](https://img.shields.io/badge/License-coming%20soon-lightgrey)](#license)
+
+Official repository for **BLFusion** and the **MRLL** dataset.
+
+</div>
 
 ---
 
 ## 📌 Overview
 
-**BLFusion** is designed for robust infrared and visible image fusion under challenging low-light and noise-degraded nighttime scenarios.
+**BLFusion** is an unsupervised darkness- and noise-aware infrared-visible image fusion framework for challenging nighttime scenes. It is designed to jointly handle two major low-light barriers: insufficient illumination and complex real-world noise.
 
-<img width="861" height="405" alt="image" src="https://github.com/user-attachments/assets/facb4247-a1f4-40e5-bfac-b2c34bcb44ab" />
+<p align="center">
+  <img width="861" alt="BLFusion overview" src="https://github.com/user-attachments/assets/facb4247-a1f4-40e5-bfac-b2c34bcb44ab" />
+</p>
 
-This repository will provide:
+Existing low-light fusion methods often focus on brightness enhancement while overlooking noise suppression. Degradation-aware supervised methods can model multiple degradations, but they usually rely on paired high-quality references and may suffer from imbalanced optimization between enhancement and denoising.
 
-- The official implementation of **BLFusion**
-- Pretrained models
-- Evaluation scripts
-- The proposed **MRLL** dataset
-- Visualization and comparison results
+BLFusion addresses these issues with a customized two-stage unsupervised framework. The first stage enhances dark visible images through Retinex-guided decomposition with state space modeling. The second stage performs denoising and fusion jointly, producing fused images with clearer structures, richer textures, and stronger robustness under real low-light noise.
 
----
+## ✨ Highlights
 
-## Framework
+- **Darkness- and noise-aware fusion**: simultaneously improves illumination and suppresses complex noise in low-light infrared-visible fusion.
+- **Retinex-guided SSM decomposition**: combines Retinex theory with state space modeling to enhance dark visible images while preserving structural details.
+- **Unsupervised denoising fusion**: integrates pixel-shuffle downsampling, blind-spot networks, and dilated convolutions to learn noise-free features without clean references.
+- **Maximum replacement refinement**: reduces visual artifacts and further improves fused image quality during inference.
+- **MRLL dataset**: provides 500 aligned infrared-visible image pairs captured from real-world indoor and outdoor nighttime scenes.
 
-<img width="1081" height="1072" alt="image" src="https://github.com/user-attachments/assets/2039acd6-55c0-4f1a-9d20-409325c96f8f" />
+## 🧩 Framework
 
----
+<p align="center">
+  <img width="100%" alt="BLFusion framework" src="https://github.com/user-attachments/assets/2039acd6-55c0-4f1a-9d20-409325c96f8f" />
+</p>
+
+BLFusion contains two dedicated stages:
+
+1. **State Space Model-Based Decomposition Network**: decomposes low-light visible images into illumination and reflectance components. The Retinex-inspired design models illumination degradation, while efficient state space modules capture long-range dependencies and preserve fine visual details.
+2. **Unsupervised Denoising and Fusion Network**: extracts noise-suppressed features from enhanced visible and infrared images. Pixel-shuffle downsampling disrupts spatial noise correlation, blind-spot networks avoid identity mapping, and dilated convolutions expand contextual perception for robust denoising and fusion.
+
+## 🗓️ Release Plan
+
+The full project will be released after the official paper process is complete. Planned materials include:
+
+- [ ] Source code for the official BLFusion implementation
+- [ ] Pretrained model checkpoints
+- [ ] Testing and evaluation scripts
+- [ ] Training scripts and configuration files
+- [x] MRLL dataset download links
+- [ ] Visualization tools and qualitative comparison results
+- [ ] Detailed usage instructions and reproducibility notes
+
 ## 🛠️ Installation
 
-Coming soon.
-
----
+The installation guide will be provided together with the code release.
 
 ## 🧪 Testing
 
-Coming soon.
-
----
+Testing and evaluation instructions will be added after the official implementation is released.
 
 ## 🚀 Training
 
-Coming soon.
-
----
+Training scripts, configuration files, and dataset preparation instructions will be released after the official implementation is available.
 
 ## 📦 Pretrained Models
 
-Coming soon.
-
----
+Pretrained checkpoints will be made available with the code release.
 
 ## 📈 Results
 
-Coming soon.
+Quantitative results, qualitative comparisons, and robustness evaluations will be added in the official release.
 
 ---
 
 # MRLL Dataset
 
-**MRLL** stands for **Multi-modal Real-world Low-Light Dataset**.
+**MRLL** stands for **Multi-modal Real-world Low-Light Dataset**. It is a synchronized dual-spectral dataset built for infrared-visible image fusion under realistic nighttime degradation.
 
-MRLL is a synchronized dual-spectral dataset collected under real-world low-light conditions. It is designed to support research on infrared-visible image fusion, especially for nighttime and degraded visual scenarios.
-
----
+MRLL contains **500 well-aligned infrared-visible image pairs** with a resolution of **960 x 720**. The dataset covers diverse indoor and outdoor low-light scenes, varying illumination levels, and complex real-world noise patterns, making it suitable for evaluating fusion models under practical nighttime conditions.
 
 ## 📥 Dataset Availability
 
@@ -74,56 +95,51 @@ The full MRLL dataset is available at:
 | Baidu Drive | [Download](https://pan.baidu.com/s/1jEnsi1v-xEGYtOvUQ6Oj9w?pwd=ek7j) | `ek7j` |
 | Google Drive | [Download](https://drive.google.com/drive/folders/1Yu_6_Z0zjqYkV4GfWAu8ZtW88bn77yWN?usp=drive_link) | - |
 
----
-
 ## 🔍 Synchronized Dual-Spectral Imaging and Registration
 
-The MRLL dataset is collected using synchronized infrared and visible imaging devices. Image registration is performed to obtain aligned dual-spectral image pairs.
+MRLL is collected with synchronized visible and infrared imaging devices. The visible and infrared images are aligned through cross-modal registration to obtain paired dual-spectral samples for fusion research.
 
 <p align="center">
-  <img width="1184" height="499" alt="Synchronized dual-spectral imaging and registration" src="https://github.com/user-attachments/assets/44d23316-6587-41e0-aa77-abb1115bd0ef" />
+  <img width="100%" alt="Synchronized dual-spectral imaging and registration" src="https://github.com/user-attachments/assets/44d23316-6587-41e0-aa77-abb1115bd0ef" />
 </p>
-
----
 
 ## 🌃 Scenario Schematic
 
-MRLL covers diverse real-world low-light scenarios (Indoor and Outdoor), including challenging nighttime environments with complex illumination, weak textures, and degraded visible information.
+MRLL covers diverse real-world low-light scenarios, including indoor and outdoor nighttime scenes with weak illumination, complex lighting, texture degradation, and challenging visibility.
 
 <p align="center">
-  <img width="2058" height="805" alt="Scenario schematic" src="https://github.com/user-attachments/assets/06983185-f1d2-4923-8e5b-8fc1fe67c4bb" />
+  <img width="100%" alt="Scenario schematic" src="https://github.com/user-attachments/assets/06983185-f1d2-4923-8e5b-8fc1fe67c4bb" />
 </p>
-
----
 
 ## 📊 Comparison with Existing Low-Light Fusion Datasets
 
-Compared with existing low-light infrared-visible fusion datasets, MRLL provides real-world paired data with synchronized acquisition and carefully designed low-light scenarios.
+Compared with existing low-light infrared-visible fusion datasets, MRLL provides synchronized real-world paired data, indoor and outdoor coverage, and multiple realistic noise patterns.
 
 <p align="center">
-  <img width="1917" height="519" alt="Comparison of low-light fusion datasets" src="https://github.com/user-attachments/assets/f5a8c870-52ee-406b-94cf-a77cc484af48" />
+  <img width="100%" alt="Comparison of low-light fusion datasets" src="https://github.com/user-attachments/assets/f5a8c870-52ee-406b-94cf-a77cc484af48" />
 </p>
 
 <p align="center">
-  <img width="1143" height="245" alt="Dataset comparison details" src="https://github.com/user-attachments/assets/20556f56-9115-430a-bc3b-90ee5e802e70" />
+  <img width="900" alt="Dataset comparison details" src="https://github.com/user-attachments/assets/20556f56-9115-430a-bc3b-90ee5e802e70" />
 </p>
-
----
 
 ## 📄 License
 
-Coming soon.
-
----
+The license will be announced before the public code release. Please use the MRLL dataset for research purposes only unless otherwise specified.
 
 ## 📚 Citation
 
-If you find this work or dataset useful for your research, please consider citing our paper.
+If you find this work or dataset useful for your research, please consider citing our paper. The BibTeX entry will be updated after publication.
 
-<!--```bibtex
-@article{blfusion,
-  title   = {BLFusion},
-  author  = {Author Names},
-  journal = {To appear},
+```bibtex
+@article{chen2026blfusion,
+  title   = {Breaking Low-Light Fusion Barrier: Unsupervised Darkness and Noise-Aware Visible and Infrared Image Fusion Network},
+  author  = {Jiajun Chen and Han Xu and Guangcan Liu and Jiayi Ma},
+  journal = {IEEE Transactions on Image Processing},
   year    = {2026}
-}-->
+}
+```
+
+## 📬 Contact
+
+For questions about BLFusion or the MRLL dataset, please open an issue in this repository.
