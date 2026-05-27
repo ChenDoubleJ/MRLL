@@ -10,6 +10,8 @@ Official repository for **BLFusion**.
 
 **BLFusion** is designed for robust infrared and visible image fusion under challenging low-light and noise-degraded nighttime scenarios.
 
+<img width="861" height="405" alt="image" src="https://github.com/user-attachments/assets/facb4247-a1f4-40e5-bfac-b2c34bcb44ab" />
+
 This repository will provide:
 
 - The official implementation of **BLFusion**
